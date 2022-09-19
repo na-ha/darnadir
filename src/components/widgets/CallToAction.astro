@@ -1,29 +1,80 @@
 ---
 import { Icon } from 'astro-icon';
+import Picture from '~/components/core/Picture.astro';
 ---
 
 <section class="relative">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="py-12 md:py-20">
-			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none">
-				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
-					<span>Astro</span> + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+			<div class="max-w-3xl mx-auto text-center py-6  shadow-xl">
+				<Picture
+						src={import('~/assets/images/hero.jpg')}
+						class="mx-auto shadow-lg bg-gray-400 dark:bg-slate-700 w-full"
+						widths={[400, 768]}
+						sizes=" (max-width: 767px) 400px, 768px"
+						alt="Hero Image"
+						aspectRatio="7:5"
+					/>
+				<br><br>	
+				<h2 class="text-4xl md:text-4xl mb-4 font-heading text-stone-900">
+					<span>Uniform</span> <br class="block sm:hidden" />
 				</h2>
-				<p class="text-xl text-gray-600 dark:text-slate-400">
-					Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-					waste more time! :P
+				<p class="text-xl text-stone-800">
+					White on white embroidered T-Shirt. <br>Made in Paris intra muros.<br>100% organic cotton. <br>Free shipping.<br>No returns.<br>150 €.
 				</p>
-
 				<div class="mt-6">
+					<button id="buy" class="btn text-stone-100 bg-emerald-800 hover:bg-emerald-900 mb-4 sm:mb-0 text-3xl">Buy</button>
+				</div>
+				<script>
+					function toggleSizer(){
+						const sizer = document.getElementById('sizer');
+						const sizerLabel = document.getElementById('sizerLabel');
+						const button = document.getElementById('buy');
+						button.classList.toggle('hidden');
+						sizer.classList.toggle('hidden');
+						sizerLabel.classList.toggle('hidden');
+					}
+
+					window.addEventListener('load', function() {
+						document.getElementById('buy').addEventListener('click',() => {
+							toggleSizer();
+						}) 
+					})
+					
+					
+				</script>
+				<div id="sizerLabel" class="mt-6 hidden sizer text-3xl">Choose your size</div>
+				<div id="sizer" class="mt-6 hidden sizer">
+					
 					<a
-						class="btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0"
-						href="https://github.com/onwidget/astrowind"
+						class="btn text-stone-100 bg-emerald-800 hover:bg-emerald-900 mb-4 sm:mb-0 text-3xl"
+						href="https://buy.stripe.com/3cscQO9Wo4mE4x2aEG"
 						target="_blank"
 						rel="noopener"
 					>
-						<Icon name="tabler:download" class="w-5 h-5 mr-1 -ml-1.5" /> Get template
+					Petit
+					</a>
+					<a
+						class="btn text-stone-100 bg-emerald-800 hover:bg-emerald-900 mb-4 sm:mb-0 text-3xl"
+						href="https://buy.stripe.com/cN23ge9Wo6uMbZudQT"
+						target="_blank"
+						rel="noopener"
+					>
+					Moyen
+					</a>
+					<a
+						class="btn text-stone-100 bg-emerald-800 hover:bg-emerald-900 mb-4 sm:mb-0 text-3xl"
+						href="https://buy.stripe.com/7sI7wu4C4cTa0gMdQU"
+						target="_blank"
+						rel="noopener"
+					>
+					Grand
 					</a>
 				</div>
+				<br>
+					<a
+						class="text-stone-500 hover:text-stone-400 transition duration-150 ease-in-out text-xl"
+						href="#size">Size Guide</a>
 			</div>
 		</div>
 	</div>

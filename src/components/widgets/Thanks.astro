@@ -1,0 +1,23 @@
+---
+import { getHomePermalink } from '~/utils/permalinks';
+---
+
+<section class="flex items-center h-full p-16">
+	<div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+		<div class="max-w-3xl text-center">
+			<h2 class="mb-8 text-7xl">
+				<span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-emerald-900">Thank You!</span>
+			</h2>
+			<p class="text-3xl md:text-3xl">Your order has been received and will be fulfilled shortly.</p>
+			<p class="mt-4 mb-8 text-lg text-stone-600">
+				In the meantime, if you have any question or request, please contact us.
+			</p>
+			<a
+				rel="noopener noreferrer"
+				href={getHomePermalink()}
+				class="btn text-stone-50 bg-stone-900 hover:bg-stone-800  ml-4"
+				>Back to homepage</a
+			>
+		</div>
+	</div>
+</section>

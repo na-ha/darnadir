@@ -1,0 +1,11 @@
+---
+import Layout from '~/layouts/BaseLayout.astro';
+import { SITE } from '~/config.mjs';
+import Thanks from '~/components/widgets/Thanks.astro';
+
+const title = `Thank you — ${SITE.name}`;
+---
+
+<Layout meta={{ title }}>
+	<Thanks />
+</Layout>

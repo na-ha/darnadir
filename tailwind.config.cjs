@@ -8,6 +8,23 @@ module.exports = {
 			colors: {
 				primary: colors.blue,
 				secondary: colors.pink,
+				'sky': "#72AAD5",
+				'egg': "#E7E3DA",
+				'beige': "#CBBFB9",
+				'xik': 'rgb(31, 13, 10)',
+				'fogra': "#0A0A0A",
+				'bubble-gum': '#ff77e9',
+				'tahiti': {
+					100: '#cffafe',
+					200: '#a5f3fc',
+					300: '#67e8f9',
+					400: '#22d3ee',
+					500: '#06b6d4',
+					600: '#0891b2',
+					700: '#0e7490',
+					800: '#155e75',
+					900: '#164e63',
+				},
 			},
 			fontFamily: {
 				sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],

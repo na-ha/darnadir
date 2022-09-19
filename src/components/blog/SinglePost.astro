@@ -14,7 +14,7 @@ const { post } = Astro.props;
 				<time datetime={post.pubDate}>{getFormattedDate(post.pubDate)}</time> ~ {Math.ceil(post.readingTime)} min read
 			</p>
 			<h1
-				class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading"
+				class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter mb-8 font-heading"
 			>
 				{post.title}
 			</h1>
@@ -22,7 +22,7 @@ const { post } = Astro.props;
 				post.image && (
 					<Picture
 						src={post.image}
-						class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+						class="sm:max-w-2xl lg:max-w-3xl md:max-w-3xl mx-auto mt-4 mb-6 bg-gray-400 dark:bg-slate-700"
 						widths={[400, 900]}
 						sizes="(max-width: 900px) 400px, 900px"
 						alt={post.description}
@@ -32,7 +32,7 @@ const { post } = Astro.props;
 			}
 		</header>
 		<div
-			class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+			class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:font-bold prose-a:text-stone-500 text-center prose-img:rounded-md prose-img:shadow-lg mt-8"
 		>
 			<Fragment set:html={post.body} />
 		</div>
