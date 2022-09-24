@@ -18,7 +18,7 @@
 
 @font-face {
 	font-family: Parisienne;
-	src: url(src/assets/fonts/Parisienne-Regular.ttf);
+	src: url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
   }
 
 /* .spacer {
@@ -29,9 +29,6 @@
 	font-family: Parisienne, cursive;
 }
 
-.font-aladin {
-	font-family: Aladin;
-}
 
 [data-aw-toggle-menu] path {
 	@apply transition;
