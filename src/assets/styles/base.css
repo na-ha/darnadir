@@ -18,7 +18,7 @@
 
 @font-face {
 	font-family: Parisienne;
-	src: url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+	src: url(src/assets/fonts/Parisienne-Regular.ttf);
   }
 
 /* .spacer {
