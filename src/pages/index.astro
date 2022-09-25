@@ -4,7 +4,7 @@ import { getCanonical, getHomePermalink } from '~/utils/permalinks';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import EmpireCTA from '~/components/widgets/EmpireCTA.astro';
+import CTA from '~/components/widgets/CTA.astro';
 
 const meta = {
 	title: SITE.title,
@@ -15,5 +15,5 @@ const meta = {
 
 <Layout {meta}>
 	<Hero />
-	<EmpireCTA />
+	<CTA />
 </Layout>
